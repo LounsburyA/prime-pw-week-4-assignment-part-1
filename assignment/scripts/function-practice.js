@@ -116,20 +116,20 @@ console.log('The total is:', sumAll([1,2,7]));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-// let num = 0
-// function allPos (array){
-// if (num > 0 ) {
-//   return num
-// } else {
-//   return []
-// }
-// }
-let num = 0
-function allPos(array) {
 
+function posNum(numbers) {
+  let positiveNumbers =[];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > 0) {
+      positiveNumbers.push(numbers[i]);
+    }
+  }
+  return positiveNumbers;
 }
-console.log(allPos([-2, -4, 5, 6]));
-console.log(allPos([5, 6]));
+console.log(posNum([1,2,3]));
+console.log(posNum([-1,-2,-3]));
+console.log(posNum([-2,-4,-6,7,8,9]));
+
 // if i>0 add number to Array ex. [1,2,3,4]
 // else if no positive Return empty array []
 
@@ -137,3 +137,16 @@ console.log(allPos([5, 6]));
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+//Fix the code in the code tab to pass this challenge (only syntax errors). Look at the examples below to get an idea of what the function should do.
+// Examples
+// cubes(3) ➞ 27
+// cubes(5) ➞ 125
+// cubes(10) ➞ 1000
+//code to fix:
+// function cubes(a) {
+// 	retunr a ** 3
+//}
+function cubes(a) {
+	return a ** 3;
+}
