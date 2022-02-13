@@ -9,7 +9,7 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-hello()
+hello();
 console.log('Test - should say "Hello World!"', hello());
 
 
@@ -28,12 +28,14 @@ function addNumbers( firstNumber, secondNumber) {
 return firstNumber + secondNumber;
   // return firstNumber + secondNumber;
 }
+addNumbers(2,3)
 console.log('In add: ', addNumbers(2,3));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(num1, num2, num3){
 return num1 * num2 * num3;
 }
+multiplyThree([2,2,2])
 console.log('In multiply:', multiplyThree(2,2,2));
 
 // 5. Function that will return true if a number is positive,
@@ -44,12 +46,15 @@ function isPositive( number ) {
   }
     return false;
 }
+isPositive(3);
+isPositive(0);
+isPositive(-3);
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
-
+console.log(isPositive(4));
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
@@ -63,9 +68,17 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // console.log(getLast());
 // }
 
+// function getLast( array ){
+//   let ilast = array[array.length -1]
+// }
+// return ilast;
+// getLast([1,2,3,4]);
+// console.log(getLast([1,2,3,4]));
+
 function getLast( array ) {
 return[array[array.length-1]];
 }
+getLast(['apple', 'orange', 'watermelon', 'pear'])
 console.log(getLast(['apple','orange', 'watermelon', 'pear']));
 console.log(getLast([]));
 //   .length -1 gives last item in array
@@ -82,6 +95,8 @@ for (let i = 0; i < array.length; i++) {
   }
   return false;
 }
+find(1, [7,8,9,1])
+find(1, [6,7,8,9])
 console.log('true', find(1, [7,8,9,1]));
 console.log('false', find(1, [6,7,8,9]));
 // for statement with if statement, if else outside of loop maybe
@@ -98,6 +113,7 @@ if (letter != string[0]) {
   return true;
 }
 }
+isFirstLetter('a','apple')
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 console.log(isFirstLetter('c', 'apple'));//my check 1
@@ -111,6 +127,7 @@ function sumAll(array) {
   }
   return sum;
 }
+sumAll([2,2,2])
 console.log('The total is:', sumAll([2,2,2]));
 console.log('The total is:', sumAll([1,2,7]));
 // 10. Function to return a new array of all positive (greater than zero)
@@ -126,6 +143,7 @@ function posNum(numbers) {
   }
   return positiveNumbers;
 }
+posNum([1,2,3])
 console.log(posNum([1,2,3]));
 console.log(posNum([-1,-2,-3]));
 console.log(posNum([-2,-4,-6,7,8,9]));
